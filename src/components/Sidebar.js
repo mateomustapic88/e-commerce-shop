@@ -9,9 +9,14 @@ import CartItem from "./CartItem";
 
 // SidebarContext
 import { SidebarContext } from "../contexts/SidebarContext";
+// import Cart Context
+import { CartContext } from "../contexts/CartContext";
 
 const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext);
+  const { cart } = useContext(CartContext);
+  console.log(useContext(CartContext));
+
   return (
     <div
       className={`${
@@ -26,6 +31,11 @@ const Sidebar = () => {
         >
           <IoMdArrowForward className='text-2xl'></IoMdArrowForward>
         </div>
+      </div>
+      <div>
+        {cart.map((item) => {
+          return <div>{item.title}</div>;
+        })}
       </div>
     </div>
   );
