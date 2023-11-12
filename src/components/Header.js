@@ -5,6 +5,7 @@ import { SidebarContext } from "../contexts/SidebarContext";
 import { CartContext } from "../contexts/CartContext";
 // icons
 import { BsBag } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   // header state
@@ -17,7 +18,9 @@ const Header = () => {
   return (
     <header className='bg-gray-400'>
       <div className='container py-4 shadow-md mx-auto flex items-center justify-between h-full'>
-        <div>Logo mock</div>
+        <Link to='/'>
+          <div>Home</div>
+        </Link>
         {/** cart */}
         <div
           className='cursor-pointer flex relative max-w-[50px]'

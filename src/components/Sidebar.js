@@ -41,7 +41,7 @@ const Sidebar = () => {
         <div className='bg-gray-200 flex w-full justify-between items-center'>
           {/** total */}
           <div className='uppercase font-semibold'>
-            <span className='mr-2'>Total: </span> $ {totalPrice}
+            {/* <span className='mr-2'>Total: </span> $ {totalPrice} */}
           </div>
           {/** clear cart icon */}
           <div

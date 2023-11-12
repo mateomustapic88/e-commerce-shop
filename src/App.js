@@ -15,8 +15,8 @@ import SideBar from "./components/Sidebar";
 const App = () => {
   return (
     <div className='overflow-hidden'>
-      <Header />
       <Router>
+        <Header />
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='/product/:id' element={<ProductDetails />}></Route>
