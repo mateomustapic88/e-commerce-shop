@@ -14,7 +14,7 @@ import { CartContext } from "../contexts/CartContext";
 
 const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext);
-  const { cart, clearCart } = useContext(CartContext);
+  const { cart, clearCart, totalPrice } = useContext(CartContext);
   console.log(useContext(CartContext));
 
   return (
@@ -32,7 +32,7 @@ const Sidebar = () => {
           <IoMdArrowForward className='text-2xl'></IoMdArrowForward>
         </div>
       </div>
-      <div>
+      <div className='flex flex-col gap-y-2 h-[480px] lg:h-[520px] overflow-y-auto border-b'>
         {cart.map((item) => {
           return <CartItem item={item} key={item.id} />;
         })}
@@ -41,7 +41,7 @@ const Sidebar = () => {
         <div className='bg-gray-200 flex w-full justify-between items-center'>
           {/** total */}
           <div className='uppercase font-semibold'>
-            <span className='mr-2'>Total: </span> $ 1000
+            <span className='mr-2'>Total: </span> $ {totalPrice}
           </div>
           {/** clear cart icon */}
           <div
