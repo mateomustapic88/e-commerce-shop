@@ -1,24 +1,26 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 // pages
-import Home from './pages/Home';
-import ProductDetails from './pages/ProductDetails';
+import Home from "./pages/Home";
+import ProductDetails from "./pages/ProductDetails";
 
 // components
-import CartItem from './components/CartItem';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Product from './components/Product';
-import SideBar from './components/Sidebar';
+import CartItem from "./components/CartItem";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Product from "./components/Product";
+import SideBar from "./components/Sidebar";
 
 const App = () => {
   return (
-    <div className="overflow-hidden">
+    <div className='overflow-hidden'>
+      <Header />
+
       <Router>
         <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/product/:id" element={<ProductDetails />}></Route>
+          <Route path='/' element={<Home />}></Route>
+          <Route path='/product/:id' element={<ProductDetails />}></Route>
         </Routes>
         <SideBar />
         <Footer />
