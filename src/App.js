@@ -9,7 +9,7 @@ import ProductDetails from "./pages/ProductDetails";
 import CartItem from "./components/CartItem";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Product from "./components/Product";
+import AllProducts from "./pages/AllProducts";
 import SideBar from "./components/Sidebar";
 
 const App = () => {
@@ -20,6 +20,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='/product/:id' element={<ProductDetails />}></Route>
+          <Route path='/allProducts' element={<AllProducts />}></Route>
         </Routes>
         <SideBar />
         <Footer />
